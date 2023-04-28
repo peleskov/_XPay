@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="xpay" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="xpay"
+       version="1.1">
+
+    <object class="XPayOrder" table="xpay_orders" extends="xPDOSimpleObject">
+        <field key="order_id" dbtype="int" phptype="int" precision="10" null="false"/>
+        <field key="invoice_id" dbtype="varchar" phptype="string" precision="255" null="false"/>
+        <field key="link" dbtype="varchar" phptype="string" precision="255" null="false" default=''/>
+        <field key="3ds_link" dbtype="varchar" phptype="string" precision="255" null="false" default=''/>
+        <field key="3ds_created" dbtype="int" precision="10" phptype="integer" null="true" />
+
+        <index alias="order_id" name="order_id" primary="false" unique="true" type="BTREE">
+            <column key="order_id" length="" collation="A" null="false" />
+        </index>
+        <index alias="invoice_id" name="invoice_id" primary="false" unique="false" type="BTREE">
+            <column key="invoice_id" length="" collation="A" null="false" />
+        </index>
+
+        <aggregate alias="Order" class="msOrder" local="order_id" foreign="id" cardinality="one" owner="foreign"/>
+
+    </object>
+
+</model>
