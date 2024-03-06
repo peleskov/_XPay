@@ -11,7 +11,7 @@ if (!defined('MODX_CORE_PATH')) {
 return [
     'name' => 'XPay',
     'name_lower' => 'xpay',
-    'version' => '1.1.0',
+    'version' => '2.0.1',
     'release' => 'pl',
     // Install package to site right after build
     'install' => true,
@@ -25,7 +25,7 @@ return [
         'policy_templates' => false,
         'mspayments' => true,
         'resources' => false,
-        'settings' => true,
+        'settings' => false,
         'snippets' => false,
         'templates' => false,
         'widgets' => false,

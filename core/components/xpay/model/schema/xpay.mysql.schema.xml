@@ -5,9 +5,11 @@
     <object class="XPayOrder" table="xpay_orders" extends="xPDOSimpleObject">
         <field key="order_id" dbtype="int" phptype="int" precision="10" null="false"/>
         <field key="invoice_id" dbtype="varchar" phptype="string" precision="255" null="false"/>
-        <field key="link" dbtype="varchar" phptype="string" precision="255" null="false" default=''/>
-        <field key="3ds_link" dbtype="varchar" phptype="string" precision="255" null="false" default=''/>
-        <field key="3ds_created" dbtype="int" precision="10" phptype="integer" null="true" />
+        <field key="link" dbtype="varchar" phptype="string" precision="255" null="true" default=''/>
+        <field key="3ds_link" dbtype="varchar" phptype="string" precision="255" null="true" default=''/>
+        <field key="guid" dbtype="varchar" precision="255" phptype="string" null="true" default=''/>
+        <field key="guid_spb" dbtype="varchar" precision="255" phptype="string" null="true" default=''/>
+        <field key="qrLink" dbtype="varchar" precision="255" phptype="string" null="true" default=''/>
 
         <index alias="order_id" name="order_id" primary="false" unique="true" type="BTREE">
             <column key="order_id" length="" collation="A" null="false" />

@@ -14,7 +14,9 @@ $xpdo_meta_map['XPayOrder']= array (
     'invoice_id' => NULL,
     'link' => '',
     '3ds_link' => '',
-    '3ds_created' => NULL,
+    'guid' => '',
+    'guid_spb' => '',
+    'qrLink' => '',
   ),
   'fieldMeta' => 
   array (
@@ -37,7 +39,7 @@ $xpdo_meta_map['XPayOrder']= array (
       'dbtype' => 'varchar',
       'phptype' => 'string',
       'precision' => '255',
-      'null' => false,
+      'null' => true,
       'default' => '',
     ),
     '3ds_link' => 
@@ -45,15 +47,32 @@ $xpdo_meta_map['XPayOrder']= array (
       'dbtype' => 'varchar',
       'phptype' => 'string',
       'precision' => '255',
-      'null' => false,
+      'null' => true,
       'default' => '',
     ),
-    '3ds_created' => 
+    'guid' => 
     array (
-      'dbtype' => 'int',
-      'precision' => '10',
-      'phptype' => 'integer',
+      'dbtype' => 'varchar',
+      'precision' => '255',
+      'phptype' => 'string',
       'null' => true,
+      'default' => '',
+    ),
+    'guid_spb' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '255',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
+    ),
+    'qrLink' => 
+    array (
+      'dbtype' => 'varchar',
+      'precision' => '255',
+      'phptype' => 'string',
+      'null' => true,
+      'default' => '',
     ),
   ),
   'indexes' => 
